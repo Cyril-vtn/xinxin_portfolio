@@ -50,8 +50,8 @@ h6 {
 }
 .video_container {
   position: relative;
-  width: 90%;
-  padding-bottom: 50.625%; /* 16:9 Aspect Ratio (9 / 16 * 100 = 56.25%) */
+  width: 92%;
+  padding-bottom: 51.25%; /* 16:9 Aspect Ratio (9 / 16 * 100 = 56.25%) */
   background-color: var(--white);
 }
 
@@ -65,8 +65,9 @@ video {
 }
 .title_container {
   position: absolute;
-  bottom: -10%;
-  right: -8%;
+  bottom: 0%;
+  padding-bottom: -50.625%; /* 16:9 Aspect Ratio (9 / 16 * 100 = 56.25%) */
+  right: -6%;
   color: var(--gray);
   z-index: 2;
   user-select: none;
@@ -75,14 +76,14 @@ video {
 
 .title {
   font-family: "AO Mireille", sans-serif;
-  font-size: 7rem;
+  font-size: clamp(2rem, 5vw, 7rem);
   font-weight: 500;
   color: var(--gray);
 }
 
 .subtitle {
   font-family: "AO Mireille", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(15px, 1vw, 2rem);
   color: var(--gray);
   text-align: right;
 }
@@ -170,3 +171,4 @@ video {
 .menu_item:hover {
   color: var(--accent-color);
 }
+
