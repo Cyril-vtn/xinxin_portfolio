@@ -3,6 +3,7 @@
   font-family: "AO Mireille";
   src: url("../font/AO\ Mireille.ttf");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../font/Roboto-Regular.ttf");
@@ -16,7 +17,8 @@
 :root {
   --white: #f8f8f8;
   --gray: #444444;
-  --accent-color: #070707;      
+  --accent-color: #070707;
+  --green: #62e662;
 }
 
 /* reset css */
@@ -51,6 +53,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 .video_container {
   position: relative;
@@ -59,13 +62,12 @@ h6 {
   background-color: var(--white);
 }
 
-video {
+.trailer_video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 .title_container {
   position: absolute;
@@ -145,34 +147,77 @@ video {
   height: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  
+  background-color: var(--accent-color);
 }
 
-.container h2 {
-  padding-top: 2em;
-  font-family: "AO Mireille", sans-serif;
-  font-size: 3rem;
-  color: var(--white);
+.header h2 {
+  font-family: "NeueMontreal", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  line-height: 1;
   letter-spacing: 0.1em;
-  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 50px 0;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1em;
+  gap: 40px;
 }
 
 .menu_item {
-  font-family: "AO Mireille", sans-serif;
-  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   color: var(--white);
-  letter-spacing: 0.1em;
   cursor: pointer;
 }
 
-.menu_item:hover {
-  color: var(--accent-color);
+.menu_item a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
 }
 
+.menu_item a:hover {
+  color: var(--green);
+  font-style: italic;
+}
+
+#active {
+  color: var(--green);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: var(--accent-color);
+}
+
+.showcase_video {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background-color: var(--accent-color);
+}
+
+.showcase_video video {
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+}
