@@ -1,10 +1,10 @@
-const preview_container = document.getElementById('preview');
+const preview_container = document.getElementById('preview_container');
 
 function removePreview() {
   preview_container.classList.add('hide-with-animation');
   setTimeout(() => {
     preview_container.remove();
-  }, 3000);
+  }, 2000);
 }
 
 // when the user presses any key, remove the preview container with animation
