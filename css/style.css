@@ -229,3 +229,37 @@ main {
   height: 100%;
   background-color: var(--accent-color);
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 80px 0;
+  color : var(--white);
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+}
+
+.social_media {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.social_media li {
+  list-style: none;
+}
+
+.social_media a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social_media a:hover {
+  color: var(--green);
+}
