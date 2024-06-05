@@ -12,7 +12,7 @@ Suivez ces étapes pour obtenir une copie de ce projet sur votre machine locale 
 
 ```bash
 # Clone ce dépôt
-$ git clone https://github.com/username/xinxin_portfolio.git
+$ git clone https://github.com/Cyril-vtn/xinxin_portfolio.git
 
 # Allez dans le répertoire du projet
 $ cd xinxin_portfolio
