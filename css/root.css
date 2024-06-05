@@ -1,0 +1,22 @@
+/* font setup */
+@font-face {
+  font-family: "AO Mireille";
+  src: url("../font/AO\ Mireille.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../font/NeueMontreal-Regular.otf");
+}
+
+:root {
+  --white: #f8f8f8;
+  --gray: #444444;
+  --accent-color: #070707;
+  --green: #75dc75;
+}
