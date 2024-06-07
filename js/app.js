@@ -12,3 +12,7 @@ document.addEventListener('keydown', removePreview);
 
 // when the user clicks anywhere, remove the preview container with animation
 document.addEventListener('click', removePreview);
+
+window.onload = function() {
+  document.getElementById('videoWrapper').focus();
+};
