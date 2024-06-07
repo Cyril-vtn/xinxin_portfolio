@@ -134,6 +134,7 @@ h6 {
   max-width: 1440px;
   margin: 0 auto;
   background-color: var(--accent-color);
+  overflow: auto;
 }
 
 main {
