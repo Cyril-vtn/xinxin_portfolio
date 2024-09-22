@@ -68,30 +68,32 @@ export default function Galery() {
           {mediaItems.map((item, index) => (
             <div
               key={index}
-              className="relative cursor-pointer overflow-hidden shadow-lg aspect-video group"
+              className="relative cursor-pointer overflow-hidden shadow-lg group"
               onClick={() => setSelectedMedia(item)}
             >
               {item.type === "image" ? (
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className={`w-full h-auto object-cover rounded-lg ${
-                    item.src.endsWith(".gif") ? "gif-pause" : ""
-                  }`}
-                />
+                <div className="w-full h-full flex items-center justify-center">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={500}
+                    height={500}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               ) : (
-                <video
-                  src={item.src}
-                  className="w-full h-full object-cover"
-                  muted
-                  loop
-                  playsInline
-                  controlsList="nodownload"
-                  onContextMenu={(e) => e.preventDefault()}
-                  disablePictureInPicture
-                />
+                <div className="aspect-video">
+                  <video
+                    src={item.src}
+                    className="w-full h-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                    controlsList="nodownload"
+                    onContextMenu={(e) => e.preventDefault()}
+                    disablePictureInPicture
+                  />
+                </div>
               )}
               <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <h3 className="text-white text-center font-semibold text-sm sm:text-base lg:text-lg xl:text-xl">
