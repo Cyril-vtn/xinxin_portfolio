@@ -24,9 +24,12 @@ const ProtectedYouTubeVideo = () => {
           onSubmit={handleSubmit}
           className="flex flex-col items-center justify-center h-full"
         >
-          <h2 className="text-lg font-roboto mb-4 text-center text-text-light">
+          <h2 className="text-lg font-roboto mb-2 text-center text-text-light">
             Enter the password to access the video
           </h2>
+          <p className="text-sm text-text-light mb-6 text-center">
+            Get the password from my email or contact me :)
+          </p>
           <input
             type="password"
             value={password}
