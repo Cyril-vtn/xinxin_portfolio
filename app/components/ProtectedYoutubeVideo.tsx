@@ -9,11 +9,6 @@ const ProtectedYouTubeVideo = () => {
   const videoId = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_ID;
 
   const handleSubmit = (e: React.FormEvent) => {
-    console.log(
-      "Stored password:",
-      process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_PASSWORD
-    );
-    console.log("Entered password:", password);
     e.preventDefault();
     if (password === process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_PASSWORD) {
       setIsAuthenticated(true);
