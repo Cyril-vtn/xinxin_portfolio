@@ -1,12 +1,27 @@
 "use client";
 
 import ProtectedYouTubeVideo from "./components/ProtectedYoutubeVideo";
+import YouTube from "react-youtube";
 
 export default function Home() {
+  const useProtectedVideo =
+    process.env.NEXT_PUBLIC_USE_PROTECTED_VIDEO === "true";
+  const videoId = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_ID;
+
   return (
     <div className="max-w-7xl mx-auto">
       <main className="flex flex-col items-center">
-        <ProtectedYouTubeVideo />
+        {useProtectedVideo ? (
+          <ProtectedYouTubeVideo />
+        ) : (
+          <div className="w-full aspect-w-16 aspect-h-9">
+            <YouTube
+              videoId={videoId}
+              className="w-full aspect-video px-10"
+              iframeClassName="w-full h-full"
+            />
+          </div>
+        )}
       </main>
 
       <footer className="flex flex-col items-center py-20 gap-8">
